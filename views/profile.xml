@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+          <record id="increment_profile_sequence" model="ir.sequence">
+            <field name="name">Field Incrementation</field>
+            <field name="code">increment_profile</field>
+            <field name="prefix"></field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    <!-- model.name inherit form view -->
+    <record id="res_partner_inherit_view_id" model="ir.ui.view">
+      <field name="name">res.partner.inherit.view.form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <!-- Add your xpath here -->
+        <xpath expr="//notebook" position="inside">
+
+          <page string="basic Data">
+            <group col="4" colspan="4">
+              <field name="name"/>
+              <field name="projct_number"/>
+              <field name="parnet_activites"/>
+              <field name="projct_nationality"/>
+              <field name="employment_count"/>
+              <field name="local_employment"/>
+              <field name="foreign_employment"/>
+              <field name="project_capital"/>
+              <field name="tax_number"/>
+              <field name="social_welfare_number"/>
+              <field name="activity_description"/>
+            </group>
+
+
+          </page>
+          <page string="license Data">
+            <group col="4" colspan="4">
+              <field name="license_number"/>
+              <field name="section"/>
+              <field name="license_yaer"/>
+              <field name="license_date"/>
+              <field name="business_name"/>
+              <field name="child_activites"/>
+
+            </group>
+
+
+          </page>
+
+          <page string="decisions Data">
+            
+            <group>
+              <field name="decision_details"/>
+            </group>
+
+          </page>
+
+          <page string="docs Data">
+
+            <group>
+              <field name="docs">
+                <tree create="true" delete="true" edit="true" editable="bottom">
+                      <field name="name"/>
+                      <field name="attachment"/>
+                      </tree>
+
+              </field>
+            </group>
+
+          </page>
+
+          <page string="location Data">
+
+            <group col="4" colspan="4">
+              <field name="area"/>
+              <field name="land_number"/>
+              <field name="square"/>
+              <field name="place"/>
+              <field name="coordinates"/>
+            </group>
+
+          </page>
+          <page string="visits Data">
+
+            <group >
+
+              <field name="visit_details"/>
+            </group>
+
+          </page>
+          <page string="owners Data">
+
+            <group>
+
+              <field name="owners">
+               <tree create="true" delete="true" edit="true" editable="bottom">
+                      <field name="name"/>
+                      <field name="nationality"/>
+                      <field name="representative"/>
+                      <field name="phone"/>
+                      <field name="mobile"/>
+                      <field name="email"/>
+                      <field name="id_type"/>
+                      <field name="id_number"/>
+
+                    </tree>
+
+              </field>
+
+            </group>
+
+          </page>
+          <page string="archives Data">
+
+            <group>
+              <field name="file_number"/>
+              <field name="box_number"/>
+            </group>
+
+          </page>
+        </xpath>
+        <!-- <xpath expr="//notebook/page[@nstring='Contacts &amp; Addresses']" position="attributes">
+              <attribute name="invisible">1 </attribute>
+            </xpath> -->
+        <xpath expr="//notebook/page[@name='sales_purchases']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//notebook/page[@name='internal_notes']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//field[@name='type']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//field[@name='function']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//field[@name='website']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//field[@name='category_id']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//field[@name='title']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+        <xpath expr="//label[@name='address_name']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='street']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='state_id']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='zip']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='country_id']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+                <xpath expr="//field[@name='vat']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+               <xpath expr="//field[@name='vat']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+          <xpath expr="//field[@name='company_type']" position="attributes">
+          <attribute name="invisible">1 </attribute>
+        </xpath>
+            <xpath expr="//field[@name='vat']" position="before">
+          <field name="Legal_form"/>
+        </xpath>
+
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="profile_action_window">
+      <field name="name">profile</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,form,pivot</field>
+    </record>
+        <menuitem name="profile" id="profile_menu"   groups="general_department_employee,investor_services_employee" sequence="4" />
+
+    <menuitem name="profile" id="profile" parent="profile_menu" action="profile_action_window" groups="general_department_employee,investor_services_employee" sequence="4" />
+
+  </data>
+</odoo>

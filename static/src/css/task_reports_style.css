@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'AmiriQuranRegular';
+    src: url(/fleet_reports/static/fonts/amiri-regular.ttf);
+}
+table {
+    border-collapse: collapse;
+    border-color: black;
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+table, tr, td, th, tbody, thead, tfoot {
+    page-break-inside: avoid !important;
+    font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.ttf) format('truetype');
+}

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="profile_category" model="ir.module.category">
+            <field name="name">بروفايل</field>
+            <field name="sequence">2</field>
+        </record>
+        <!-- 
+        <record id="new_license_category" model="ir.module.category">
+            <field name="name">new license</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="field_visit_category" model="ir.module.category">
+            <field name="name">field visit</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="decisions_category" model="ir.module.category">
+            <field name="name">decisions</field>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="new_license_user" model="res.groups">
+            <field name="name">service employee</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="new_license_technical_authority" model="res.groups">
+            <field name="name">technical authority</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="business_names_registrar" model="res.groups">
+            <field name="name">Business Names Registrar</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="section" model="res.groups">
+            <field name="name">section</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="section_manager" model="res.groups">
+            <field name="name">section manager</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="general_manager" model="res.groups">
+            <field name="name">General manager</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="general_secretary" model="res.groups">
+            <field name="name">General Secretary</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="counter" model="res.groups">
+            <field name="name">counter</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record>
+        <record id="profile" model="res.groups">
+            <field name="name">profile</field>
+            <field name="category_id" ref="new_license_category"/>
+        </record> -->
+
+        <record id="general_department_employee" model="res.groups">
+            <field name="name">general department employee</field>
+            <field name="category_id" ref="profile_category"/>
+        </record>
+        <record id="investor_services_employee" model="res.groups">
+            <field name="name">investor services employee</field>
+            <field name="category_id" ref="profile_category"/>
+        </record>
+
+
+        <!-- <record id="follow-up_and_evaluation_employee" model="res.groups">
+            <field name="name">Follow-up and evaluation employee</field>
+            <field name="category_id" ref="field_visit_category"/>
+        </record> -->
+        <record id="profile_rule" model="ir.rule">
+        <field name="name">profile rule</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','in',company_ids)]</field>
+    </record>
+    </data>
+</odoo>
+
