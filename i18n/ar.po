@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-13 17:57+0000\n"
-"PO-Revision-Date: 2020-11-13 17:57+0000\n"
+"POT-Creation-Date: 2020-11-21 12:55+0000\n"
+"PO-Revision-Date: 2020-11-21 12:55+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -259,6 +259,7 @@ msgstr "التكلفة"
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__create_uid
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__create_uid
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__create_uid
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__create_uid
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__create_uid
 msgid "Created by"
 msgstr ""
@@ -279,6 +280,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__create_date
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__create_date
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__create_date
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__create_date
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__create_date
 msgid "Created on"
 msgstr ""
@@ -381,6 +383,7 @@ msgstr "تاريخ التوقف"
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__display_name
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__display_name
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__display_name
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__display_name
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__display_name
 msgid "Display Name"
 msgstr ""
@@ -554,6 +557,7 @@ msgstr "مولدات"
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__id
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__id
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__id
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__id
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__id
 msgid "ID"
 msgstr ""
@@ -623,6 +627,7 @@ msgstr "ملكيه الأرض"
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material____last_update
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens____last_update
 #: model:ir.model.fields,field_description:nia_profile.field_team_members____last_update
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority____last_update
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit____last_update
 msgid "Last Modified on"
 msgstr ""
@@ -643,6 +648,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__write_uid
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__write_uid
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__write_uid
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__write_uid
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -663,6 +669,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__write_date
 #: model:ir.model.fields,field_description:nia_profile.field_request_attachmens__write_date
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__write_date
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__write_date
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__write_date
 msgid "Last Updated on"
 msgstr ""
@@ -787,6 +794,7 @@ msgstr "تعديل القرار"
 #: model:ir.model.fields,field_description:nia_profile.field_productive_unit__name
 #: model:ir.model.fields,field_description:nia_profile.field_raw_material__name
 #: model:ir.model.fields,field_description:nia_profile.field_team_members__name
+#: model:ir.model.fields,field_description:nia_profile.field_technical_authority__name
 #: model:ir.model.fields,field_description:nia_profile.field_weights_unit__name
 msgid "Name"
 msgstr "الاسم"
@@ -990,6 +998,11 @@ msgid "Security"
 msgstr "امنية"
 
 #. module: nia_profile
+#: model:ir.model.fields,field_description:nia_profile.field_nia_section__seq
+msgid "Seq"
+msgstr ""
+
+#. module: nia_profile
 #: model:ir.model.fields,field_description:nia_profile.field_nia_owners__shares_number
 msgid "Shares Number"
 msgstr "عدد الاسهم"
@@ -1063,6 +1076,11 @@ msgid "Technical"
 msgstr "فنية"
 
 #. module: nia_profile
+#: model:ir.model.fields,field_description:nia_profile.field_res_users__technical_authority
+msgid "Technical Authority"
+msgstr "الجهة الفنية"
+
+#. module: nia_profile
 #: model:ir.model.fields,field_description:nia_profile.field_decisions_decisions__technical_authority_comment
 #: model:ir.model.fields,field_description:nia_profile.field_nia_new_license__technical_authority_comment
 msgid "Technical Authority Comment"
@@ -1097,6 +1115,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:nia_profile.field_decisions_decisions__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
+
+#. module: nia_profile
+#: model:ir.model,name:nia_profile.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
 
 #. module: nia_profile
 #: model:ir.model.fields,field_description:nia_profile.field_field_visit__visit_date
@@ -1711,6 +1734,11 @@ msgid "request type"
 msgstr "نوع الطلب"
 
 #. module: nia_profile
+#: model:ir.model.fields,field_description:nia_profile.field_nia_new_license__respansiable
+msgid "respansiable"
+msgstr "الموظف المسئول"
+
+#. module: nia_profile
 #: model:ir.model.fields,field_description:nia_profile.field_decisions_decisions__section
 #: model:ir.model.fields,field_description:nia_profile.field_field_visit__section
 #: model:ir.model.fields,field_description:nia_profile.field_nia_new_license__section
@@ -1795,6 +1823,7 @@ msgid "team.members"
 msgstr "فريق الزيارة"
 
 #. module: nia_profile
+#: model:ir.model.fields,field_description:nia_profile.field_nia_new_license__technical_authority
 #: model:ir.model.fields.selection,name:nia_profile.selection__decisions_decisions__change_activity__3
 #: model:ir.model.fields.selection,name:nia_profile.selection__decisions_decisions__change_activity__4
 #: model:ir.model.fields.selection,name:nia_profile.selection__decisions_decisions__enter_partner__3
@@ -1808,6 +1837,11 @@ msgstr "فريق الزيارة"
 #: model:ir.model.fields.selection,name:nia_profile.selection__decisions_decisions__rental_form__4
 #: model:ir.model.fields.selection,name:nia_profile.selection__nia_new_license__state__3
 msgid "technical authority"
+msgstr "الجهة الفنية"
+
+#. module: nia_profile
+#: model:ir.model,name:nia_profile.model_technical_authority
+msgid "technical.authority"
 msgstr "الجهة الفنية"
 
 #. module: nia_profile

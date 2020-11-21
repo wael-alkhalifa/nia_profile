@@ -9,7 +9,13 @@ class res_users(models.Model):
     _inherit = 'res.users'
 
     section = fields.Many2one('nia.section', 'section')
+    technical_authority = fields.Many2one('technical.authority', '')
     
+
+class technical_authority(models.Model):
+    _name = 'technical.authority'
+
+    name = fields.Char('')
 
 
 class nia_fees(models.Model):
@@ -75,8 +81,11 @@ class nia_new_license(models.Model):
     Legal_form = fields.Selection([('person', 'person'),('company', 'company'),('partnership', 'partnership')],)
     fees = fields.Many2one('nia.fees', 'fees')
     
+
     company_name = fields.Char()
     section = fields.Many2one('nia.section', 'section')
+    technical_authority = fields.Many2one('technical.authority', 'technical authority')
+    respansiable = fields.Many2one('res.users', 'respansiable')
     parnet_activites = fields.Many2one('parnet.activity', 'parnet activites')
     child_activites = fields.Many2one('child.activity', 'child activites')
     activity_description = fields.Char()
@@ -111,7 +120,18 @@ class nia_new_license(models.Model):
     general_secretary = fields.Many2one('general.secretary', '')
     
     qr_image = fields.Binary("QR Code", compute='_generate_qr_code')
+    
 
+    @api.onchange('section')
+    def ganti_domain(self):
+        
+        return {
+            'domain':
+                {
+                    'respansiable': [('section', '=', self.section.id)]
+                },
+        }
+    
  
     
     def _generate_qr_code(self):

@@ -17,6 +17,6 @@ access_general_secretary,nia.general_secretary,model_general_secretary,base.grou
 access_nia_fees,nia.fees,model_nia_fees,base.group_user,1,1,1,1
 access_nia_profile,nia.profile,model_res_partner,investor_services_employee,1,1,1,1
 access_investor_services_employee,nia.investor_services_employee,model_res_partner,general_department_employee,1,1,1,1
-
+access_technical_authority,technical.authority,model_technical_authority,base.group_user,1,1,1,1
 
 
